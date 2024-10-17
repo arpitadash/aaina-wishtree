@@ -1,0 +1,391 @@
+body {
+    background-color: #94E8FF;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Blue background section */
+.blue-background {
+    background: #94E8FF; /* Blue background */
+    width: 100%;
+    text-align: center;
+    z-index: -1;
+}
+
+/* Green background section */
+.green-background {
+    background-color: #6B923E; /* Green background */
+    width: 100vw; /* Add some padding */
+    padding: 50px 0px;
+    text-align: center;
+}
+
+header  {
+    padding: 10px 10px;
+    align-items: flex-start;
+}
+
+body h1 {
+    text-align: center;
+    
+    font-family: 'Irish Grover', cursive;
+    font-size: 24px;
+    color: #22211e;
+}
+
+.tree-section {
+    width: 100vw; /* Tree will take up the rest of the space */
+    display: flex;
+    justify-content: left;
+    /* flex-grow: 2; */
+}
+
+#headerTree {
+    width:30%;
+    height: 20%;
+}
+
+#danutsavdescriptionholder {
+    width: 28%;
+    height: 20%;
+}
+
+#danutsavdescription {
+    font-size: 16px;
+}
+#spanHeaderWish  {
+    font-size: 24px;
+}
+#spanLoader {
+    font-size: 24px;
+}
+
+#wishbranch {
+    /* This positions the entire wishbranch group relative to the tree */
+    position: relative;
+    width: 4%;
+    height: auto;
+}
+
+/* Position each board relative to the tree */
+#board1 {
+    /* Position the board1 image relative to tree.svg */
+    transform: translate(50%, 50%);
+}
+
+#board2 {
+    transform: translate(45%, 20%);
+}
+
+#board3 {
+    transform: translate(65%, 30%);
+}
+
+.loader-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 50px auto;
+}
+
+.back-arrow {
+    /* padding: 20px; */
+    position: absolute;
+    top: 15px; /* Adjust as necessary */
+    left: 60px; /* Adjust as necessary */
+    text-decoration: none; /* Remove underline */
+    color: rgb(28, 25, 25); /* Change color as needed */
+    font-size: 64px; /* Adjust size */
+}
+
+/* Circle background */
+.loader {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#84bfdc 0% 0%, #eee 0% 100%);
+}
+
+/* Percentage text */
+.loader-percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Animation for loader fill */
+@keyframes fillLoader {
+    from {
+        background: conic-gradient(#84bfdc 0%, #eee 0% 100%);
+    }
+    to {
+        background: conic-gradient(#84bfdc 100%, #eee 0% 100%);
+    }
+}
+
+svg {
+    position: relative; /* Keep the SVG in its normal flow */
+    z-index: 1; /* Ensure the SVG is on top of the green section */
+    display: block; /* Ensure it takes up full width */
+    margin: 0 auto; /* Center the SVG horizontally */
+    padding-top: 50px;
+    width: 100vw;
+}
+
+/* General font settings */
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+/* Center the leaderboard section */
+.leaderboard-section {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    left: 5%;
+    width: 60%;
+    max-width: 400px;
+    margin: 0 auto; /* Center horizontally */
+    padding: 30px;
+    align-content: center;
+    text-align: center;
+    background-color: #D9A750; /* Background color for the leaderboard */
+    border-radius: 75px; 
+}
+
+/* Title with Irish Grover font and custom color */
+.leaderboard-section h2 {
+    font-family: 'Irish Grover', cursive;
+    font-size: 24px;
+    color: #4C3C20;
+    margin-bottom: 15px;
+    background-color: #CA9A46;  /* Background for the title */
+    padding: 10px 30px;
+    border-radius: 50px;
+    margin: 10px 20px;
+}
+
+/* Scrollable leaderboard list */
+.leaderboard-list {
+    max-height: 300px;
+    overflow-y: scroll; /* Hides the scrollbar */
+    scrollbar-color: grey #D9A750 ;
+    position: relative;
+   /* Rounded corners for the leaderboard */
+   align-content: center;
+    padding: 30px;
+}
+
+/* Leaderboard row with gifter name and badge */
+.leaderboard-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    color: #4C3C20; /* Text color for rows */
+    margin-bottom: 10px;
+}
+.leaderboard-row span {
+    padding: 10px 30px;
+    background-color: #CA9A46; /* Row background color */
+    border-radius: 50px; /* Rounded corners for each row */
+}
+.badge-icon {
+    width: 48px;
+    height: 48px;
+}
+
+#floatingContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.floating {
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    animation: floatUp 2s ease-in-out forwards;
+}
+
+@keyframes floatUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+
+
+
+/* Glowing and shaking animation for hamburger */
+@keyframes glow-shake {
+    0% { transform: rotate(0); box-shadow: 0 0 5px #fff; }
+    25% { transform: rotate(1deg); box-shadow: 0 0 10px #fff; }
+    50% { transform: rotate(0); box-shadow: 0 0 5px #fff; }
+    75% { transform: rotate(-1deg); box-shadow: 0 0 10px #fff; }
+    100% { transform: rotate(0); box-shadow: 0 0 5px #fff; }
+}
+
+
+
+/* Floating +1 animation */
+@keyframes float-plus-one {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-30px); opacity: 0.7; }
+    100% { transform: translateY(-50px); opacity: 0; }
+}
+
+.plus-one {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    animation: float-plus-one 1s forwards;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close-button {
+    color: #dddada;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .content-container {
+        flex-direction: column;
+    }
+    .body h1 {
+        font-size: 24px;
+    }
+    #headerTree {
+        width: 80%;
+    }
+    #spanHeaderWish {
+        width: 80%;
+        font-size: 16px;
+        text-align: center;
+    }
+    #spanLoader {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .tree-section {
+        width: 100%;
+        flex-direction: column;
+    }
+
+
+    #tracker {
+        display: none;
+    }
+
+    .svg {
+        padding-top: 20px;
+    }
+    
+    #treeImage {
+        x: 0;
+        y: 10vh;
+        width:100vw;
+        height: 100vh;
+    }
+
+    #harvest {
+        x:20vw;
+        y:60vh;
+        width: 30vw;
+        height: 30vh; 
+    }
+
+    #board1 {
+        /* Position the board1 image relative to tree.svg */
+        transform: translate(10%, 50%);
+    }
+    
+    #board2 {
+        transform: translate(45%, 40%);
+    }
+    
+    #board3 {
+        transform: translate(50%, 60%);
+    }
+
+    #danutsav {
+        y: 25%;
+        width: 20%;
+    }
+
+    #danutsavdescriptionholder {
+        display: none;
+    }
+
+    
+}
+
+@media (min-width: 769px){
+    
+    #treeImage {
+        width: 640px;
+        height: 640px;
+    }
+    .svg {
+        padding-top: 200px; 
+    }
+    #harvest {
+        width:"10vw";
+        height:"20%" ;
+    }
+    #danutsav {
+        width: 20%;
+        height: 20%;
+    }
+    
+    #danutsavdescriptionholder {
+        display: block;
+    }
+}
+

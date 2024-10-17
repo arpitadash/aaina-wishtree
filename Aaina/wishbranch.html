@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAINA Wish Tree</title>
+    <link rel="stylesheet" href="styles_wishbranch.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="container">
+        <a href="index1.html" class="back-arrow">
+            <span class="material-icons">arrow_back</span>
+        </a>
+        <div class="branch" id="branch1" onclick="showModal('branch1')">
+            <img src="floweringbranchleft.svg" alt="Branch 1" />
+        </div>
+        <h1>Click on the leaves of the wish tree to start granting wishes!</h1>
+        <div class="branch" id="branch2" onclick="showModal('branch2')">
+            <img src="floweringbranchright.svg" alt="Branch 2" />
+        </div>
+    </div>
+
+    <!-- <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div class="donation-info">
+                <span>"Gift the sound of learning! Contribute towards hearing aids for children in need.</span>
+            </div>
+            <div class="slider-container">
+                <span>₹250</span>
+                <input type="range" min="250" max="500" step="250" value="250" id="donationSlider">
+                <span>₹500</span>
+            </div>
+            <button class="donate" onclick="donate()">Donate Now</button>
+        </div>
+    </div> -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div class="donation-info">
+                <span id="modal-description"></span>
+            </div>
+            <div class="slider-container">
+                <span id="min-amount"></span>
+                <input type="range" id="donationSlider" oninput="updateDonationAmount()">
+                <span id="max-amount"></span>
+            </div>
+            <div class="donation-info">
+                <span id="selected-amount">₹0</span> <!-- Display the selected amount -->
+            </div>
+            <button class="donate" onclick="location.href='https://payments.billdesk.com/bdcollect/bd/aainango/14469'">Donate Now</button>
+            <span style="font-size: 10px;">The information you provide will be used solely for official purposes and in accordance with applicable data protection and privacy laws. </span>
+        </div>
+    </div>
+    
+
+    <div class="modal" id="thankYouModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeThankYouModal()">&times;</span>
+            <h2>Thank You!</h2>
+            <p>Your generous donation is greatly appreciated!</p>
+        </div>
+    </div>
+    
+
+    <div class="popup" id="popup">
+        <p>Every little donation makes a huge difference!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

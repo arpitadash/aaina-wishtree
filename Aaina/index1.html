@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAINA Wish Tree</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <a href="index1.html" class="back-arrow"></a>
+            <span class="material-icons">arrow_back</span>
+        </a>
+    </header>
+
+    <main>
+        
+       
+            <div class="tree-section">
+                
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width='800' height="800" preserveAspectRatio="xMidYMid meet">
+                    
+                    
+                
+                    <g id="treeGroup" >
+                        <!-- Tree -->
+                         
+                    <rect x="0" y="60%" width="100%" height="40%" fill="#6B923E" />
+                    <g id="treeSpecific" >
+                        <image href="tree.svg" id="treeImage" x="40vw" y="0" />
+                        
+                        <!-- <h1 id="titleTree">Welcome to the Wish Tree</h1> -->
+                        <!-- Links/Boards -->
+                        <g id="wishbranch" >
+                            <a href="wishbranch.html?category=drr" class="wish" data-category="Disaster Relief" style="text-decoration: none;">
+                                <image href="DRRboard.svg" id="board1">
+                                    <animateTransform attributeName="transform"
+                                        type="scale"
+                                        values="1; 1.005; 1"
+                                        dur="1s"
+                                        begin="0s"
+                                        repeatCount="5" />
+                                </image>
+                            </a>
+                            <a href="wishbranch.html?category=education" class="wish" data-category="Education" style="text-decoration: none;">
+                                <image href="Educationboard.svg" id="board2" >
+                                    <animateTransform attributeName="transform"
+                                        type="scale"
+                                        values="1; 1.005; 1"
+                                        dur="1s"
+                                        begin="0s"
+                                        repeatCount="5" />
+                                </image>
+                            </a>
+                            <a href="wishbranch.html?category=wellbeing" class="wish" data-category="Wellbeing" style="text-decoration: none;">
+                                <image href="Wellbeingboard.svg" id="board3">
+                                    <animateTransform attributeName="transform"
+                                        type="scale"
+                                        values="1; 1.005; 1"
+                                        dur="1s"
+                                        begin="0s"
+                                        repeatCount="5" />
+                                </image>
+                            </a>
+                        </g>
+                        <a href="#donorlist" style="text-decoration: none;">
+                            <image id="harvest" href="harvest.svg" x="35vw" y="50%" />
+                        </a>
+                        </g>
+                        <foreignObject id="headerTree" x="45vw" y="75%">
+                            <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                                <span id="spanHeaderWish" style="font-family: 'Gravitas One', sans-serif; color: #adadad;">WISH TREE</span>
+                            </div>
+                        </foreignObject>
+                    </g>
+                    <foreignObject id="headerTree" x="8vw" y="10vh">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: center; justify-content: center; height: 100%;">
+                            <span id="spanHeaderWish" style="font-family: 'Gravitas One', sans-serif; color: #22211e;">Grant wishes during this Daan Utsav! Click the boards to get started!</span>
+                        </div>
+                    </foreignObject>
+                    <image href="dan_utsav.jpeg" id="danutsav"  x="8%" y="35%" width="15%" height="15%" />
+                    <foreignObject id="danutsavdescriptionholder" x="8vw" y="55%">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: center; justify-content: flex-start; height: 100%;">
+                            <span id="danutsavdescription" > Aaina has proudly partnered with Daan Utsav since 2011, creating opportunities for the community to embrace the Joy of Giving. Join us in celebrating this spirit of generosity through its Wish tree campaign now!
+                            </span>
+                        </div>
+                    </foreignObject>
+                </svg>
+                </div><div id="donorModal" class="modal">
+                       
+                        <div id="donorlist" class="leaderboard-section">
+                            <span class="close-button">&times;</span>
+                            <h2>Top Donors</h2>
+                            <div class="leaderboard-list">
+                                <!-- Rows with names and icons (badges) -->
+                                <div class="leaderboard-row">
+                                    <span>Braahmam</span>
+                                    <img src="Diamond.svg" alt="Badge 1" class="badge-icon">
+                                <!-- </div>
+                                <div class="leaderboard-row">
+                                    <span>Gifter 1</span>
+                                    <img src="Diamond.svg" alt="Badge 1" class="badge-icon">
+                                </div>
+                                <div class="leaderboard-row">
+                                    <span>Gifter 1</span>
+                                    <img src="Diamond.svg" alt="Badge 1" class="badge-icon">
+                                </div>
+                                <div class="leaderboard-row">
+                                    <span>Gifter 2</span>
+                                    <img src="Platinum.svg" alt="Badge 2" class="badge-icon">
+                                </div>
+                                <div class="leaderboard-row">
+                                    <span>Gifter 3</span>
+                                    <img src="Gold.svg" alt="Badge 3" class="badge-icon">
+                                </div>
+                                <div class="leaderboard-row">
+                                    <span>Gifter 4</span>
+                                    <img src="Gold.svg" alt="Badge 3" class="badge-icon">
+                                </div>
+                                <div class="leaderboard-row">
+                                    <span>Gifter 5</span>
+                                    <img src="Gold.svg" alt="Badge 3" class="badge-icon">
+                                </div> -->
+                                <!-- Add more rows dynamically via API -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+        <section class="green-background">
+            <span id="spanLoader" style="font-family: 'Gravitas One', sans-serif; color: #22211e;">Every contribution brings us closer. Watch how far we've come!</span>
+                         
+            <div class="loader-container">
+                <div class="loader">
+                    <div class="loader-percentage" id="loaderPercentage">0%</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <script>
+         var modal = document.getElementById("donorModal");
+
+// Get the button that opens the modal
+var openModalTrigger = document.getElementById("harvest");
+
+// Get the <span> element that closes the modal
+var closeButton = document.getElementsByClassName("close-button")[0];
+
+// When the user clicks the SVG, open the modal
+openModalTrigger.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+closeButton.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+let percentage = 0;
+    fillLoader(10)
+
+    function fillLoader(percentage) {
+        const loader = document.querySelector('.loader');
+        const loaderPercentage = document.getElementById('loaderPercentage');
+
+        
+
+        // Update loader fill and percentage text
+        loader.style.background = `conic-gradient(#00aaff ${percentage}%, #eee 0% 100%)`;
+        loaderPercentage.textContent = percentage + '%';
+
+        // Stop when percentage reaches 100%
+        if (percentage >= 100) {
+            clearInterval(interval);
+        }
+    }   
+    </script>
+</body>
+</html>

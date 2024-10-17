@@ -1,0 +1,289 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #B3E6F4;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 20px; */
+    overflow-y: clip;
+    z-index: 0;
+}
+
+.branch {
+    cursor: pointer;
+    width: 40%; /* Adjust size as needed */
+    height: auto;
+}
+.container h1{
+    position: absolute;
+    width:30%;
+    left: 35%;
+    right: 35%;
+    text-align: center;
+    font-family: 'Irish Grover', cursive;
+    color: #22211e;
+}
+.branch img {
+    max-width: 100%; /* Ensure the image fits within the branch container */
+    height: auto; /* Maintain aspect ratio */
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Background with blur effect */
+    text-align: center;
+}
+.donation-info {
+    background-color: #FDC5D3;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: #FFD6E0;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px; /* Adjust as needed */
+    border-radius: 10px;
+}
+
+.back-arrow {
+    position: absolute;
+    top: 15px; /* Adjust as necessary */
+    left: 30px; /* Adjust as necessary */
+    text-decoration: none; /* Remove underline */
+    color: rgb(28, 25, 25); /* Change color as needed */
+    font-size: 64px; /* Adjust size */
+}
+
+.material-icons {
+    vertical-align: middle; /* Center the icon vertically */
+    cursor: pointer;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 10px;
+    /* width: 60%; */
+}
+.slider-container span {
+    padding: 0 5px;
+}
+#donationSlider {
+    width: 20%;
+}
+
+input[type="range"] {
+    width: 70%;
+}
+
+.donate {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.donate:hover {
+    background-color: #45a049;
+}
+
+.popup {
+    position: fixed;
+    top: -100px; /* Start off-screen */
+    right: 20px;
+    background-color: #c44c6a;
+    color: #f0cad3;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Hidden initially */
+    transition: all 0.5s ease-in-out;
+}
+
+.popup.show {
+    top: 20px; /* Slide up to visible position */
+    opacity: 1;
+}
+
+/* Styles for Thank You Modal */
+#thankYouModal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 2; /* Higher than the donation modal */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Background overlay */
+}
+
+#thankYouModal .modal-content {
+    background-color: #FFD6E0; /* Light pink background */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+    position: relative;
+}
+
+#thankYouModal .close {
+    color: #aaa;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#thankYouModal .close:hover,
+#thankYouModal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Styles for Tablet and Mobile */
+@media only screen and (min-width: 769px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .branch {
+        width:40%;
+    }
+
+    .container h1 {
+        width: 80%; /* Adjust the title width for smaller screens */
+        left: 10%;
+        right: 10%;
+    }
+    .modal-content{
+          position: relative;
+    }
+}
+
+/* Mobile-specific Styles */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .branch {
+        width: 80%; /* Adjust width for mobile */
+    }
+
+    .branch#branch1 {
+        order: 2; /* Move the left branch to the bottom */
+    }
+
+    .branch#branch2 {
+        order: 1; /* Move the right branch to the top */
+    }
+
+    .container h1 {
+        width: 90%;
+        top: 40%; /* Adjust title positioning */
+        left: 5%;
+        right: 5%;
+        position: absolute; /* For proper positioning on smaller screens */
+        margin-top: 20px;
+    }
+
+    /* Adjust the modal size for mobile devices */
+    .modal-content {
+        width: 80%; /* Full width on mobile */
+        padding: 10px;
+        top: 30%;
+        left: 5%;
+        right: 5%;
+        position: absolute;
+    }
+
+    #donationSlider {
+        width: 50%; /* Adjust the slider width for mobile */
+    }
+}
+
+/* Styles for screens smaller than 480px (small mobile) */
+@media only screen and (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container h1 {
+        width: 90%;
+        top: 40%; /* Adjust title positioning */
+        left: 5%;
+        right: 5%;
+        position: absolute; /* For proper positioning on smaller screens */
+        margin-top: 20px;
+    }
+
+    .branch {
+        width: 80%; /* Further adjust width for smaller devices */
+    }
+
+    .container h1 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    /* Further modal size adjustments */
+    .modal-content {
+        width: 80%; /* Full width on small mobile */
+       padding: 10px;
+        top: 20%; /* Adjust title positioning */
+        left: 5%;
+        right: 5%;
+        position: absolute; /* For proper positioning on smaller screens */
+        /* margin-top: 20px; */
+    }
+    }
+
+    #donationSlider {
+        width: 70%; /* Make the slider larger on small screens */
+    }
+}
